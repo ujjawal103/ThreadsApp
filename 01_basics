@@ -1,0 +1,30 @@
+RESt :-
+     Representational State Transfer
+
+     REST is an architectural style that defines a set of constraints to be used for creating web services.
+
+     (RESTful API's) :- spi we will create & RESt is rules to define a API.
+                           (Follow ---- CRUD operation (Create , Read , Update , Delete))
+
+
+CRUD operation :-
+                 GET    retrieve resources.
+                 POST   submits new data to the server.
+                 PUT    updates existing data
+                 PATCH  update existing data partially
+                 DELETE removes data
+
+
+
+// Quora Post (Example)   
+
+          We use :- 
+                   GET       /posts      to get data for all posts         (index ROUTE)
+                   POST      /posts      to add a new post                 (CREATE route) 
+                   GET       /posts/:id  to get one post (using id)        (VIEW route)
+                   PATCH     /posts/:id  to update specific post           (Update ROUTE) 
+                   DELETE    /posts/:id  to delete specific post           (Destroy Route) 
+           
+
+these are the routes for different works but same route <-----  RESTfull API's.
+

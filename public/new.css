@@ -1,0 +1,88 @@
+*{
+    margin:0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+
+html,body{
+    height:100%;
+    width:100%;
+}
+
+body{
+    padding: 20px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    position: relative;
+}
+.newPost{
+    background-color: rgb(74, 70, 70);
+       width: 90vw;
+       color: #fff;
+       padding: 20px;
+       border: 2px solid rgb(66, 73, 170);
+       border-radius: 30px;
+       min-height: 30rem;
+}
+input{
+    min-height: 3rem;
+    width: 20vw;
+    background-color: rgb(100, 99, 102);
+    border-radius: 50px;
+    padding: 20px;
+    color: white;
+}
+input::placeholder{
+    color: white;
+}
+textarea{
+    min-height: 15rem;
+    width: 60vw;
+    border-radius: 4%;
+    padding: 20px;
+    background-color:rgb(100, 99, 102) ;
+    font-size: 2rem;
+}
+textarea::placeholder{
+    color:#b2aaaa ;
+    font-size: 2rem;
+}
+
+.Submit{
+    padding: 20px;
+    background-color: rgb(66, 73, 170);
+    color: rgb(245, 240, 240);
+    font-size: 1.2rem;
+    border:2px solid brown;
+    border-radius: 20px;
+
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+@media (min-width : 550px){
+    .newPost{
+           width: 30rem;
+    }
+    input{
+        min-height: 3rem;
+        background-color: rgb(100, 99, 102);
+        border-radius: 50px;
+        padding: 20px;
+        color: white;
+    }
+    textarea{
+        min-height: 15rem;
+        width: 400px;
+        border-radius: 4%;
+        padding: 20px;
+        background-color:rgb(100, 99, 102) ;
+        font-size: 2rem;
+    }
+}
+

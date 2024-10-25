@@ -1,0 +1,177 @@
+
+
+body{
+   
+    
+    /* background-color: #000; */
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    height: 100vh;
+}
+.navBar{
+    width: 100vw;
+    display: flex; 
+     justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: 100px;
+    
+    z-index: 10;
+
+    background-color: white;
+    top: 0px;
+    bottom: calc(100vh-100px);
+
+    
+    
+}
+.navBar a{
+    margin-right: 60px;
+    background-color: rgb(56, 86, 92);
+    padding: 10px;
+    font-size: x-large;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    border-radius: 50%;
+    border: 5px solid rgb(0, 0, 0);
+    font-style: oblique;
+    font-size: medium;  
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    align-self: center;
+}
+.fakeNav{
+    width: 100vw;
+    height: 110px;
+    background-color: white;
+}
+#main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    position: sticky;
+    z-index: 1;
+    height: calc(100vh - 160px);
+   
+}
+
+h1{
+    width: 100vw;
+    display: block;
+    color:  #000;
+    font-size: 3rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+.post{
+  background-color: #372e2e;
+  display: inline-block;
+  overflow-wrap: normal;
+  flex-wrap: wrap;
+  width: 25rem;
+  padding: 20px;
+  padding-top: 1px;
+  margin: 20px;
+  overflow: hidden;
+  
+
+  border-radius: 2rem;
+}
+.username{
+    font-style: italic;
+    color: #1cd2d8;
+    text-decoration: underline;
+
+}
+.content{
+    color: whitesmoke ; 
+    padding-left: 2rem;
+    text-wrap: wrap;
+}
+
+
+
+.detailedPost{
+    padding: 5px;
+    background-color: whitesmoke;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 10px;
+}
+.editPost{
+    color: rgb(148, 23, 232);
+  
+}
+form{
+    display: inline;
+}
+#options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+.red{
+    background-color: red;
+}
+#space{
+    width: 100vw;
+    height: 80px;
+    
+}
+
+.box{
+    background-color: #372e2e;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    height: 50px;
+    width: 100vw;
+    z-index: 10;
+    
+ 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+.social-icons a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #1DA1F2; /* You can change the hover color as per your choice */
+  }
+
+  .darkMode {
+    color: white;
+    font-size: 24px;
+    background-color: rgb(82, 75, 75);
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .love h3{
+    color: white;
+    font-style: oblique;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }

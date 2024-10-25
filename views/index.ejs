@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All POSTS</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+    <div class="navBar">
+        <h1>Threads</h1> 
+        <a href="http://localhost:8080/posts/new">New Thread</a>    <!-- whenever we click on this link it redirect to /posts/new -->
+    </div>
+    <div class="fakeNav"></div>
+    <br>
+    <div id="main">
+    <% for(post of posts){ %>
+        <div class="post">
+            <h3 class="username">@<%= post.username %> </h3>
+            <h4 class="content"> <%= post.content %> </h4>
+
+            <br>
+            <div id="options">
+                <a class="detailedPost" href="http://localhost:8080/posts/<%= post.id %>">View Post & id</a>
+                <a class="editPost detailedPost" href="http://localhost:8080/posts/<%= post.id %>/edit">Edit thread</a>
+                <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+                   <button class="detailedPost red">Delete <i class="ri-delete-bin-6-fill"></i></button>
+                </form>
+            </div>
+        </div>
+        <% } %>
+        <div id="space"></div>
+    </div>
+        <br>
+        <br>
+
+       
+        <footer>
+            <div class="box">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank">
+                      <i class="ri-facebook-fill"></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                      <i class="ri-twitter-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                      <i class="ri-instagram-fill"></i>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank">
+                      <i class="ri-linkedin-fill"></i>
+                    </a>
+                </div>
+                <div class="love">
+                    <h3>!! Presented By Ujjawal jaiswal !!</h3>
+                </div>
+                <div class="darkMode social-icons">
+                    <a>
+                        <i class="ri-moon-line"></i>
+                       
+                      </a>
+                </div>
+            </div>
+        </footer>
+
+
+        <script>
+            let mode = document.querySelector(".darkMode a");
+            let initial = "white";
+
+            mode.addEventListener("click",function(){
+                if(initial === "white"){
+                    document.querySelector(".darkMode a").innerHTML =  `<i class="ri-moon-fill"></i>`;
+                    document.querySelector(".fakeNav").style.backgroundColor = "black";
+                    document.querySelector(".navBar").style.backgroundColor = "black";
+                    document.querySelector("body").style.backgroundColor = "black";
+                    document.querySelector(".navBar h1").style.color = "white";
+                    initial = "black";
+                    console.log("hello");
+
+                }
+                else{
+                    document.querySelector(".darkMode a").innerHTML =  `<i class="ri-moon-line"></i>`;
+                    document.querySelector(".fakeNav").style.backgroundColor = "white";
+                    document.querySelector(".navBar").style.backgroundColor = "white";
+                    document.querySelector("body").style.backgroundColor = "white";
+                    document.querySelector(".navBar h1").style.color = "black";
+                    initial = "white";
+                }
+            })
+
+            setInterval(function(){
+                const mediaQuery = window.matchMedia("(max-width: 550px)");
+                const myElement = document.querySelector(".love");
+                    if (mediaQuery.matches) {
+                       myElement.innerHTML = "";
+                    }
+                    else{
+                        myElement.innerHTML = "  <h3>!! Presented By Ujjawal jaiswal !!</h3>";  
+                    }
+            },1000)
+           
+
+        </script>
+</body>
+</html>
+
+
+
