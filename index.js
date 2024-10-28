@@ -76,7 +76,7 @@ app.get("/posts/:id",(req,res)=>{
     res.render("show.ejs",{post});
   }
   else{
-    res.render("notFound.ejs");
+    res.render("notFound.ejs",{ posts });
     app.post("/posts",(req,res)=>{
         res.redirect("/posts"); 
     });

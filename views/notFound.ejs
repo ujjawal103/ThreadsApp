@@ -20,7 +20,7 @@
             color: black;
             padding: 20px;
         }
-        ul{
+        ol{
             font-style: italic;
             font-size: xx-large;
             li{
@@ -36,10 +36,11 @@
         
     </div>
     <a  href="http://localhost:8080/posts"><button type="submit"> Go Back </button></a>
-    <ul><h4>Available post id's :-</h4>
-        <li> &nbsp; &nbsp; &nbsp; &nbsp; 1a</li>
-        <li> &nbsp; &nbsp; &nbsp; &nbsp; 2b</li>
-        <li> &nbsp; &nbsp; &nbsp; &nbsp; 3c</li>
-    </ul>
+    <ol><h4>Available post id's in sequence :-</h4>
+        <% for(let post of posts){ %>
+            <li> &nbsp; &nbsp; &nbsp; &nbsp; <%= post.id %></li>
+        <% } %>
+    </ol>
 </body>
 </html>
+
