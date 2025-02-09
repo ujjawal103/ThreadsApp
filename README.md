@@ -39,7 +39,7 @@ npm install
 ```bash
 node index.js
 ```
-Your API will be running on **https://threads-app-42gx.onrender.com** 🚀  
+Your API will be running on **https://threads-app-42gx.onrender.com/posts** 🚀  
 
 ## 📌 Future Improvements  
 - 🔹 Integrate a database (MongoDB, PostgreSQL, or MySQL)  
